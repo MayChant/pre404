@@ -1,0 +1,8 @@
+{
+	board_x: 6,
+	board_y: 5,
+	player_x: 1,
+	player_y: 1,
+	door_x: 4,
+	door_x: 3
+}
