@@ -22,12 +22,12 @@
 - James Dingren Luo
 - Jimmy Jin Liu
 
-## Tester
-- Lara Rui Luo
-- Fraser Yilin Xiong
-
 ## Graphic Designer
+- Lara Rui Luo
 - Rou
+
+## Tester
+- Fraser Yilin Xiong
 
 ## Elements (Mandatory, to be finished now)
 - Player
