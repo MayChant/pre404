@@ -29,11 +29,11 @@
 	- When the player goes thru it, the player cannot go thru it again
 	- Assigned to: Ryan
 - Enemy
-	- Move up-down, or
-	- Move left-right
-	- Assigned to James and Maven
+	- Move
+	- Check (if the position of the player and the enemy are the same)
+	- Assigned to Jimmy(Move), Raven (Check) and James (Check)
 - Note 字條
-	- Assigned to James and Maven
+	- Assigned to James and Raven
 
 ## Elements (Extra, to be finished later)
 - Conveyor Belt 傳送帶
