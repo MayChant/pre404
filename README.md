@@ -11,7 +11,7 @@
 
 ## Meetings
 - First meeting
-	- May 27th, 2017, 3pm to 6pm, Gerstein B172
+	- May 27th, 2017, 3pm to 5:30pm, Gerstein B172
 	- Attendance: Annie, Ryan, Yellow, Raven, James, Jimmy, Lara
 
 ## Developer
