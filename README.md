@@ -1,4 +1,15 @@
-# Pre 404
+# A Game for 404
+
+## Tools
+- Unity
+
+## Language
+- C#
+
+## Meetings
+- First meeting
+	- May 27th, 2017, 3pm to 6pm, Gerstein B172
+	- Attendance: Annie, Ryan, Yellow, Raven, James, Jimmy, Lara
 
 ## Developer
 - Annie Meichen Dong
