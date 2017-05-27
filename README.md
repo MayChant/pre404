@@ -12,7 +12,7 @@
 - Lara Rui Luo
 - Fraser Yilin Xiong
 
-## Graphics
+## Graphic Designer
 - Rou
 
 ## Elements (Mandatory, to be finished now)
