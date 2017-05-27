@@ -1,7 +1,7 @@
 # Pre 404
 
 ## Developer
-- Annie Meicheng Dong
+- Annie Meichen Dong
 - Ryan Ruoshui Yan
 - Yellow Hongjian Huang
 - Maven Ruiwen Li
@@ -42,3 +42,21 @@
 - Transfer Gate 傳送門
 - Pillar 柱
 - Switch 開關
+
+## Map & Levels
+- Level 1: 3*3
+- Level 2: 4*4
+- Level 3: 4*4
+- Level 4: 5*5
+- Level 5: 5*5
+- Level 6: 5*5
+- Level 7: 6*6
+- Level 8: 6*6
+- Level 9: 6*6
+- Level 10: 6*6
+- Level 11: 7*7
+- Level 12: 7*7
+- Level 13: 7*7
+- Level 14: 7*7
+- Level 15: 7*7
+- Level 16: 8*8
