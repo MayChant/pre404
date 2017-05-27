@@ -4,7 +4,7 @@
 - Annie Meichen Dong
 - Ryan Ruoshui Yan
 - Yellow Hongjian Huang
-- Maven Ruiwen Li
+- Raven Ruiwen Li
 - James Dingren Luo
 - Jimmy Jin Liu
 
