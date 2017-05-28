@@ -92,8 +92,10 @@ public class DummyLevel : MonoBehaviour {
             GameObject newWall = Instantiate(wallTile, new Vector3(leftWall + i * tileSize, bottomWall, 0f), 
                 Quaternion.identity, boardHolder);
         }
-
-	}
+        // Trap the player in it
+        GameObject player = Instantiate(playerObject, new Vector3(getLeftBound() + player_x * tileSize, 
+            getLowerBound() + player_y * tileSize, 0f), Quaternion.identity, boardHolder);
+    }
 	
 	// Update is called once per frame
 	void Update () {
