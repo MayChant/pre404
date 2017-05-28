@@ -45,9 +45,9 @@
 - Enemy
 	- Move
 	- Check (if the position of the player and the enemy are the same)
-	- Assigned to Jimmy(Move), Raven (Check) and James (Check)
+	- Assigned to Jimmy(Move), James (Trigger)
 - Note 字條
-	- Assigned to James and Raven
+	- Assigned to Raven
 
 ## Elements (Extra, to be finished later)
 - Conveyor Belt 傳送帶
