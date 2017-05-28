@@ -24,7 +24,7 @@
 
 ## Graphic Designer
 - Lara Rui Luo
-- Rou
+- Roccay Ruoxuan Zhou
 
 ## Tester
 - Fraser Yilin Xiong
