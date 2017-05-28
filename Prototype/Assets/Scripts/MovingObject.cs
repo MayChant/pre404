@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public abstract class MovingObject : MonoBehaviour {
+public abstract class MovingObject : LevelElement {
 
     public float moveTime = 0.1f;
     public LayerMask blockingLayer;
+    public bool moved = false;
+    public float tileSize = 0.64f;
 
     private BoxCollider2D boxCollider;
     private Rigidbody2D rb2D;
@@ -14,10 +16,10 @@ public abstract class MovingObject : MonoBehaviour {
 	protected virtual void Start () {
         boxCollider = GetComponent<BoxCollider2D>();
         rb2D = GetComponent<Rigidbody2D>();
-        inverseMoveTime = 1f / moveTime;
+        inverseMoveTime = tileSize / moveTime;
 	}
 
-    protected bool Move (int xDir, int yDir, out RaycastHit2D hit)
+    protected bool Move (float xDir, float yDir, out RaycastHit2D hit)
     {
         Vector2 start = transform.position;
         Vector2 end = start + new Vector2(xDir, yDir);
@@ -27,22 +29,28 @@ public abstract class MovingObject : MonoBehaviour {
 
         if (hit.transform == null)
         {
-            StartCoroutine(SmoothMovement(end));
+            //StartCoroutine(SmoothMovement(end));
+            transform.Translate(new Vector3(xDir, yDir, 0f));
+            moved = true;
+            print("Moved!");
             return true;
         }
+        print("Not moved!");
         return false;
     }
 
-    protected IEnumerator SmoothMovement (Vector3 end)
+    /*protected IEnumerator SmoothMovement (Vector3 end)
     {
         float sqrRemainingDistance = (transform.position - end).sqrMagnitude;
         while (sqrRemainingDistance > float.Epsilon) {
-            Vector3 newPosition = Vector3.MoveTowards(rb2D.position, end, inverseMoveTime * Time.deltaTime);
+            print(inverseMoveTime);
+            Vector2 newPosition = Vector2.MoveTowards(rb2D.position, end, inverseMoveTime * Time.deltaTime);
             rb2D.MovePosition(newPosition);
             sqrRemainingDistance = (transform.position - end).sqrMagnitude;
+            print(sqrRemainingDistance);
             yield return null;
         }
-    }
+    }*/
 
     protected virtual void AttemptMove<T>(int xDir, int yDir)
         where T : Component
@@ -57,11 +65,12 @@ public abstract class MovingObject : MonoBehaviour {
         
         if (!canMove && hitComponent != null)
         {
-            OnCantMove(hitComponent);
+            return;
+            //OnCantMove(hitComponent);
         }
     }
-    protected abstract void OnCantMove<T>(T component)
-        where T : Component;
+    /*protected abstract void OnCantMove<T>(T component)
+        where T : Component;*/
 
     // Update is called once per frame
     void Update () {
