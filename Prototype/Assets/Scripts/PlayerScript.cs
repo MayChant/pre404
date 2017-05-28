@@ -55,4 +55,15 @@ public class PlayerScript : MovingObject
         }
         
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        //TODO: put your trigger code for other game elements here
+        //e.g.
+        /*
+         * if (other.tag=='blah') {
+         *   other.gameObject.SetActive(false);//This destroys the object
+         *}
+        */
+    }
 }

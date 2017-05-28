@@ -14,6 +14,7 @@ public class DummyLevel : MonoBehaviour {
     public int player_x = 1, player_y = 1;
     public int door_x = 2, door_y = 2;
     public float tileSize = 0.64f;
+    public bool doorOpen = false;
 
     float getLeftBound()
     {
