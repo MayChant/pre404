@@ -1,14 +1,25 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerScript : MonoBehaviour {
+public class PlayerScript : MovingObject
+{
 
     public Animator anim;
+
+    protected override void OnCantMove<T>(T component)
+    {
+        // Do not move
+    }
 
     void moveTo(Vector3 newPos)
     {
         // TODO: write collision with all objects
+
+        
+        transform.SetPositionAndRotation(newPos, Quaternion.identity);
+
     }
 
 	// Use this for initialization
