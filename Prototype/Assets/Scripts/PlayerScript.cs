@@ -8,33 +8,27 @@ public class PlayerScript : MovingObject
 
     public Animator anim;
 
-    protected override void OnCantMove<T>(T component)
-    {
-        // Do not move
-    }
-
-    void moveTo(Vector3 newPos)
+    void moveTo(float xDir, float yDir)
     {
         // TODO: write collision with all objects
 
-        
-        transform.SetPositionAndRotation(newPos, Quaternion.identity);
+        RaycastHit2D hit;
+        Move(xDir, yDir, out hit);
 
     }
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
         anim = this.GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        Vector3 newPos;
         if (Input.GetKeyDown("left"))
         {
             anim.SetTrigger("PressLeft");
-            newPos = new Vector3(transform.position.x-0.64f, transform.position.y, transform.position.z);
-            moveTo(newPos);
+            //newPos = new Vector3(transform.position.x-0.64f, transform.position.y, transform.position.z);
+            moveTo(-0.64f, 0f);
 
             //transform.Translate(new Vector3(-0.64f, 0f, 0f));
         }
@@ -42,22 +36,22 @@ public class PlayerScript : MovingObject
         {
             anim.SetTrigger("PressUp");
             //transform.Translate(new Vector3(0f, 0.64f, 0f));
-            newPos = new Vector3(transform.position.x, transform.position.y+0.64f, transform.position.z);
-            moveTo(newPos);
+            //newPos = new Vector3(transform.position.x, transform.position.y+0.64f, transform.position.z);
+            moveTo(0f, 0.64f);
         }
         else if (Input.GetKeyDown("right"))
         {
             anim.SetTrigger("PressRight");
             //transform.Translate(new Vector3(0.64f, 0f, 0f));
-            newPos = new Vector3(transform.position.x + 0.64f, transform.position.y, transform.position.z);
-            moveTo(newPos);
+            //newPos = new Vector3(transform.position.x + 0.64f, transform.position.y, transform.position.z);
+            moveTo(0.64f, 0f);
         }
         else if (Input.GetKeyDown("down"))
         {
             anim.SetTrigger("PressDown");
             //transform.Translate(new Vector3(0f, -0.64f, 0f));
-            newPos = new Vector3(transform.position.x, transform.position.y - 0.64f, transform.position.z);
-            moveTo(newPos);
+            //newPos = new Vector3(transform.position.x, transform.position.y - 0.64f, transform.position.z);
+            moveTo(0f, -0.64f);
         }
         
     }

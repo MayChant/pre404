@@ -11,7 +11,7 @@ public class DummyLevel : MonoBehaviour {
     public GameObject playerObject;
     private Transform boardHolder;
     public static int board_x = 3, board_y = 3;
-    public int player_x = 0, player_y = 0;
+    public int player_x = 1, player_y = 1;
     public int door_x = 2, door_y = 2;
     public float tileSize = 0.64f;
 
@@ -95,6 +95,10 @@ public class DummyLevel : MonoBehaviour {
         // Trap the player in it
         GameObject player = Instantiate(playerObject, new Vector3(getLeftBound() + player_x * tileSize, 
             getLowerBound() + player_y * tileSize, 0f), Quaternion.identity, boardHolder);
+        print(player_x);
+        print(player_y);
+        print(getLeftBound() + player_x * tileSize);
+        print(getLowerBound() + player_y * tileSize);
     }
 	
 	// Update is called once per frame
