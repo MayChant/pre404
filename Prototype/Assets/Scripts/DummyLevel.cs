@@ -100,10 +100,16 @@ public class DummyLevel : MonoBehaviour {
         print(player_y);
         print(getLeftBound() + player_x * tileSize);
         print(getLowerBound() + player_y * tileSize);
+
+        //Build door
+        GameObject door = Instantiate(doorTile, new Vector3(getRightBound() + door_x * tileSize,
+            getUpperBound() + door_y * tileSize, 0f), Quaternion.identity, boardHolder);
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
 }
