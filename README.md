@@ -47,6 +47,7 @@
 	- Check (if the position of the player and the enemy are the same)
 	- Assigned to Jimmy(Move), James (Trigger)
 - Note 字條
+	- Shows a line/paragraph of text
 	- Assigned to Raven
 
 ## Elements (Extra, to be finished later)
