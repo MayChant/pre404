@@ -4,5 +4,7 @@
 	player_x: 1,
 	player_y: 1,
 	door_x: 4,
-	door_x: 3
+	door_y: 3,
+	lurker_x: 4,
+	lurker_y: 4
 }
