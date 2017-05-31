@@ -8,6 +8,7 @@ public class DummyLevel : MonoBehaviour {
     public GameObject[] floorTiles;
     public GameObject wallTile;
     public GameObject doorTile;
+	public GameObject lurkerTile;
     public GameObject playerObject;
     private Transform boardHolder;
     public static int board_x = 3, board_y = 3;
