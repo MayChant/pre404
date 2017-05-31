@@ -97,6 +97,10 @@ public class DummyLevel : MonoBehaviour {
         // Trap the player in it
         GameObject player = Instantiate(playerObject, new Vector3(getLeftBound() + player_x * tileSize, 
             getLowerBound() + player_y * tileSize, 0f), Quaternion.identity, boardHolder);
+	    
+		// Create lurker
+		GameObject lurker = Instantiate(lurkerTile, new Vector3(getLeftBound() + lurker_x * tileSize, getUpperBound() + lurker_y * tileSize, 0f), Quaternion.identity, boardHolder);
+	    
         print(player_x);
         print(player_y);
         print(getLeftBound() + player_x * tileSize);
