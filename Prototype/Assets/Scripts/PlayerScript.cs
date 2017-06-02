@@ -69,12 +69,20 @@ public class PlayerScript : MovingObject
         */
         if(other.tag == "door")
         {
-            Application.LoadLevel(empty_level);
+            if(have_key == true)
+            {
+                Application.LoadLevel(empty_level);
+            }
+            
         }
         if(other.tag == "key")
         {
+            Debug.Log("collid with key!");
+            other.gameObject.SetActive(false);
+            Debug.Log("picked up key!");
             have_key = true;
             level_key.isDestroyed = true;
+            
         }
     }
 }
