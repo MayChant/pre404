@@ -7,7 +7,9 @@ public class PlayerScript : MovingObject
 {
 
     public Animator anim;
-
+    private int empty_level = 0;
+    public bool have_key = false;
+    public KeyScript level_key;
     void moveTo(float xDir, float yDir)
     {
         // TODO: write collision with all objects
@@ -65,5 +67,22 @@ public class PlayerScript : MovingObject
          *   other.gameObject.SetActive(false);//This destroys the object
          *}
         */
+        if(other.tag == "door")
+        {
+            if(have_key == true)
+            {
+                Application.LoadLevel(empty_level);
+            }
+            
+        }
+        if(other.tag == "key")
+        {
+            Debug.Log("collid with key!");
+            other.gameObject.SetActive(false);
+            Debug.Log("picked up key!");
+            have_key = true;
+            level_key.isDestroyed = true;
+            
+        }
     }
 }

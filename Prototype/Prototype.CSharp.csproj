@@ -78,7 +78,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\DoorScript.cs" />
     <Compile Include="Assets\Scripts\DummyLevel.cs" />
+    <Compile Include="Assets\Scripts\KeyScript.cs" />
     <Compile Include="Assets\Scripts\LevelElement.cs" />
     <Compile Include="Assets\Scripts\LevelReader.cs" />
     <Compile Include="Assets\Scripts\MovingObject.cs" />

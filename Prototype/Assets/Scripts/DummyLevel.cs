@@ -8,11 +8,13 @@ public class DummyLevel : MonoBehaviour {
     public GameObject[] floorTiles;
     public GameObject wallTile;
     public GameObject doorTile;
+    public GameObject keyTile;
     public GameObject playerObject;
     private Transform boardHolder;
     public static int board_x = 3, board_y = 3;
     public int player_x = 1, player_y = 1;
     public int door_x = 2, door_y = 2;
+    public int key_x = 1, key_y = 1;
     public float tileSize = 0.64f;
     public bool doorOpen = false;
 
@@ -100,10 +102,19 @@ public class DummyLevel : MonoBehaviour {
         print(player_y);
         print(getLeftBound() + player_x * tileSize);
         print(getLowerBound() + player_y * tileSize);
+
+        //Build the door
+        GameObject door = Instantiate(doorTile, new Vector3(getRightBound() - tileSize,
+            getUpperBound() - tileSize, 0f), Quaternion.identity, boardHolder);
+        //Create a key
+        GameObject key = Instantiate(keyTile, new Vector3(getRightBound() - tileSize,
+            getUpperBound(), 0f), Quaternion.identity, boardHolder);
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
 }

@@ -14,6 +14,8 @@ public class LevelReader{
     public int player_x, player_y;
     // Door initial position
     public int door_x, door_y;
+    //Key initial position
+    public int key_x, key_y;
     // TODO: After more objects are added, store the positions of the items as private
     // int[], as duplicates are allowed e.g. private int[] spikes = [0,7,9].
 
