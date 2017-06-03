@@ -8,11 +8,13 @@ public class DummyLevel : MonoBehaviour {
     public GameObject[] floorTiles;
     public GameObject wallTile;
     public GameObject doorTile;
+	public GameObject lurkerTile;
     public GameObject playerObject;
     private Transform boardHolder;
     public static int board_x = 3, board_y = 3;
     public int player_x = 1, player_y = 1;
     public int door_x = 2, door_y = 2;
+	public int lurker_x = 4, lurker_y = 4;
     public float tileSize = 0.64f;
     public bool doorOpen = false;
 
@@ -96,6 +98,10 @@ public class DummyLevel : MonoBehaviour {
         // Trap the player in it
         GameObject player = Instantiate(playerObject, new Vector3(getLeftBound() + player_x * tileSize, 
             getLowerBound() + player_y * tileSize, 0f), Quaternion.identity, boardHolder);
+	    
+		// Create lurker
+		GameObject lurker = Instantiate(lurkerTile, new Vector3(getLeftBound() + lurker_x * tileSize, getUpperBound() + lurker_y * tileSize, 0f), Quaternion.identity, boardHolder);
+	    
         print(player_x);
         print(player_y);
         print(getLeftBound() + player_x * tileSize);

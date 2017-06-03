@@ -30,6 +30,11 @@ public abstract class MovingObject : LevelElement {
         if (hit.transform == null)
         {
             //StartCoroutine(SmoothMovement(end));
+			
+			// If the current position is lurker: change it to wall but a different icon
+			// if (transform.position.??? == lurker???) {
+			//		GameObject lurker = Instantiate(lurkerTile, new Vector3(getLeftBound() + transform.position.x??? * tileSize, getUpperBound() + transform.position.y??? * tileSize, 0f), Quaternion.identity, boardHolder);
+			
             transform.Translate(new Vector3(xDir, yDir, 0f));
             moved = true;
             return true;
