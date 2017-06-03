@@ -9,9 +9,11 @@ public class DummyLevel : MonoBehaviour {
     public GameObject wallTile;
     public GameObject doorTile;
     public GameObject playerObject;
+	public GameObject enemyObject;
     private Transform boardHolder;
-    public static int board_x = 3, board_y = 3;
+    public static int board_x = 5, board_y = 5;
     public int player_x = 1, player_y = 1;
+	//public int enemy_x = 3, enemy_y = 3;
     public int door_x = 2, door_y = 2;
     public float tileSize = 0.64f;
     public bool doorOpen = false;
@@ -94,8 +96,10 @@ public class DummyLevel : MonoBehaviour {
                 Quaternion.identity, boardHolder);
         }
         // Trap the player in it
-        GameObject player = Instantiate(playerObject, new Vector3(getLeftBound() + player_x * tileSize, 
-            getLowerBound() + player_y * tileSize, 0f), Quaternion.identity, boardHolder);
+        GameObject player = Instantiate(playerObject, new Vector3(getLeftBound(), 
+            getLowerBound(), 0f), Quaternion.identity, boardHolder);
+		GameObject enemy = Instantiate(enemyObject, new Vector3(getRightBound(), 
+			getUpperBound(), 0f), Quaternion.identity, boardHolder);
         print(player_x);
         print(player_y);
         print(getLeftBound() + player_x * tileSize);

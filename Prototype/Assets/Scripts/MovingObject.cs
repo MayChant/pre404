@@ -19,7 +19,7 @@ public abstract class MovingObject : LevelElement {
         inverseMoveTime = tileSize / moveTime;
 	}
 
-    protected bool Move (float xDir, float yDir, out RaycastHit2D hit)
+	protected bool Move (float xDir, float yDir, out RaycastHit2D hit)
     {
         Vector2 start = transform.position;
         Vector2 end = start + new Vector2(xDir, yDir);
@@ -30,7 +30,7 @@ public abstract class MovingObject : LevelElement {
         if (hit.transform == null)
         {
             //StartCoroutine(SmoothMovement(end));
-            transform.Translate(new Vector3(xDir, yDir, 0f));
+			transform.Translate(new Vector3(xDir, yDir, 0f));
             moved = true;
             print("Moved!");
             return true;
