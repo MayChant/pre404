@@ -37,10 +37,8 @@ public abstract class MovingObject : LevelElement {
 			
             transform.Translate(new Vector3(xDir, yDir, 0f));
             moved = true;
-            print("Moved!");
             return true;
         }
-        print("Not moved!");
         return false;
     }
 
