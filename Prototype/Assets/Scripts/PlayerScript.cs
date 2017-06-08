@@ -65,5 +65,10 @@ public class PlayerScript : MovingObject
          *   other.gameObject.SetActive(false);//This destroys the object
          *}
         */
+        if (other.gameObject.tag == "spike")
+        {
+            print("spike");
+            other.gameObject.SetActive(false);
+        }
     }
 }

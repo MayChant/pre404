@@ -14,7 +14,7 @@ public class DummyLevel : MonoBehaviour {
     public static int board_x = 3, board_y = 3;
     public int player_x = 1, player_y = 1;
     public int door_x = 2, door_y = 2;
-	public int lurker_x = 4, lurker_y = 4;
+	public int lurker_x = 1, lurker_y = 2;
     public float tileSize = 0.64f;
     public bool doorOpen = false;
 
@@ -100,7 +100,7 @@ public class DummyLevel : MonoBehaviour {
             getLowerBound() + player_y * tileSize, 0f), Quaternion.identity, boardHolder);
 	    
 		// Create lurker
-		GameObject lurker = Instantiate(lurkerTile, new Vector3(getLeftBound() + lurker_x * tileSize, getUpperBound() + lurker_y * tileSize, 0f), Quaternion.identity, boardHolder);
+		GameObject lurker = Instantiate(lurkerTile, new Vector3(getLeftBound() + lurker_x * tileSize, getLowerBound() + lurker_y * tileSize, 0f), Quaternion.identity, boardHolder);
 	    
         print(player_x);
         print(player_y);
